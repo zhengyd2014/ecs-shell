@@ -1,0 +1,10 @@
+c ${ECS}
+m
+
+#
+# add license
+#
+al
+
+exit
+exit

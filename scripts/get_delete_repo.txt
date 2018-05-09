@@ -1,0 +1,5 @@
+connect ${ECS}
+s
+get-history-by-path "cm/REPO GC Statistics/deleted_chunks_repo.TOTAL"
+exit
+exit

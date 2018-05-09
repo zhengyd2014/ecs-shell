@@ -1,0 +1,4 @@
+m ${ECS}
+gsc ${NUM}
+exit
+exit

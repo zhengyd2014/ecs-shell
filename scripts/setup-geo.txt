@@ -1,0 +1,71 @@
+
+#
+# 1. initiate the first ECS site
+#
+connect 172.28.4.4
+management
+add-license
+create-storage-pool sp1
+
+# sleep 1 min, then back to main shell and disconnect the ecs
+!sleep 60
+exit
+disconnect
+
+
+#
+# 2. initiate the second ecs site
+#
+connect 172.28.36.68
+management
+add-license
+create-storage-pool sp2
+# sleep 1 min, then back to main shell and disconnect the ecs
+!sleep 60
+exit
+disconnect
+
+#
+# 3. initiate the third ecs site
+#
+connect 172.28.68.132
+management
+add-license
+create-storage-pool sp3
+# sleep 1 min, then back to main shell and disconnect the ecs
+!sleep 60
+exit
+disconnect
+
+
+
+#
+# 3. back to first site to create vdc and link vdc operations
+#
+connect 172.28.4.4
+management
+create-vdc vdc1
+link-vdc 172.28.36.68 vdc2
+!sleep 60
+link-vdc 172.28.68.132 vdc3
+!sleep 60
+
+
+#
+# 4. create replication group / namespace / bucket / user
+#
+create-replication-group rg1
+!sleep 30
+create-namespace ns1
+!sleep 30
+create-user  user1
+create-bucket bucket1
+
+#
+# show all information
+#
+info
+
+# exit
+exit
+exit

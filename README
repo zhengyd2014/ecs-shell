@@ -1,0 +1,15 @@
+
+# pre-requisitions:
+  1. jdk 1.8
+  2. gradle 2.5
+
+# build:
+  change directory to ecs-shell, then run below command:
+  ./gradlew jar
+
+# run:
+  java -jar build/libs/ecs-shell-1.0-SNAPSHOT.jar
+
+# edit:
+  Import into InteliJ:
+    File -> New -> Project from existing srouce ... -> <build.gradle> 
